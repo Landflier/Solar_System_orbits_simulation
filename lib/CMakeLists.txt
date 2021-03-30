@@ -1,0 +1,5 @@
+add_library(Hamiltonian Hamiltonian.c)
+add_library(Runge_Kutta Runge_Kutta_second_order.c)
+add_library(NASA_data NASA_data.c)
+#add_library(Stellar_body_struct.h INTERFACE)
+add_library(Vector_operations Vector_operations.c)

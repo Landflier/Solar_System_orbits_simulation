@@ -1,0 +1,2 @@
+/usr/bin/ar qc libVector_operations.a  CMakeFiles/Vector_operations.dir/Vector_operations.c.o
+/usr/bin/ranlib libVector_operations.a
