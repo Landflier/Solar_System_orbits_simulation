@@ -63,6 +63,7 @@ void Write_System_Variables(int N, Stellar_body* Solar_System, FILE *simulation_
     memcpy(&center_of_m, center_of_mass(N,Solar_System), sizeof(center_of_m));
     memcpy(&angular_mom, angular_momentum(N,Solar_System), sizeof(angular_mom));
     ham_of_system = Hamiltonian(N, Solar_System);
+
     for (int i = 0; i < N; i++) {
         fprintf(simulation_file, "%Le, %Le, %Le, %Le, %Le, %Le, %Le\n",
                 center_of_m[0], center_of_m[1], center_of_m[2],
