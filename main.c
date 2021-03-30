@@ -22,14 +22,15 @@ void print_current_system(int N, Stellar_body System[N]){
 int main() {
     int N=10; // number of objects
     Stellar_body Objects[N];
+    long double total_mass=0;
 
     Read_Nasa_txt_file(N,Objects);
 
 
     long double k= 3; // k is in units of days
     int years= 5000;
-    int Total_Number_of_steps = years * 365 / k;
-    //int Total_Number_of_steps = 5000;
+    //int Total_Number_of_steps = years * 365 / k;
+    int Total_Number_of_steps = 5000;
 
 
 
@@ -50,6 +51,7 @@ int main() {
     Stellar_body  New_Object[N]; // updating solar system
     for (int i=0; i<N; i++){
         New_Object[i].mass = Objects[i].mass;
+        total_mass += Objects[i].mass;
     }
     printf("Starting system data: \n");
     print_current_system(N,Objects);
@@ -64,7 +66,7 @@ int main() {
         }
             memcpy(&Objects, &New_Object, sizeof (Objects)); //update system
 
-        Write_System_Variables(N,Objects, system_variables_python);
+        Write_System_Variables(N,Objects, system_variables_python, total_mass);
 
         Write_Solar_System_iteration(N,Objects, simulation_file);
         fprintf(simulation_file, "\n"); // delimeter charecter between simulations for human readable

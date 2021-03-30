@@ -78,12 +78,13 @@ long double* g_i( Stellar_body Solar_System_object){
     return Vector_Scalar(1/Solar_System_object.mass, Solar_System_object.p);
 }
 
-long double* center_of_mass (int N, Stellar_body Solar_System[N]){
+long double* center_of_mass (int N, Stellar_body Solar_System[N], long double total_mass){
     static long double c_of_mass[3];
-    c_of_mass[0] = 0 ; c_of_mass[1] = 0 ; c_of_mass[2] = 0 ;
+    c_of_mass[0] = 0 ; c_of_mass[1] = 0 ; c_of_mass[2] = 0;
+
     for (int j = 0; j < N ; j++){
         memcpy (&c_of_mass,
-                Vector_Add(c_of_mass, Vector_Scalar(Solar_System[j].mass, Solar_System[j].q)),
+                Vector_Add(c_of_mass, Vector_Scalar(Solar_System[j].mass/total_mass, Solar_System[j].q)),
                 sizeof(c_of_mass));
     }
     return c_of_mass;
