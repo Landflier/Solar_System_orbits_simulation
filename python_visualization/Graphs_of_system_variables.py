@@ -6,6 +6,6 @@ import matplotlib.pyplot as plt
 
 
 system_variables = pd.read_csv ("../data/Simulation_Results/system_variables_python.txt", sep= ",",
-                                names= [""])
+                                names= ["L_"])
 
 print (system_variables)

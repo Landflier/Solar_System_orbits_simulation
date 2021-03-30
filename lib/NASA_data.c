@@ -47,7 +47,7 @@ void Write_Solar_System_iteration(int N, Stellar_body* Solar_System, FILE *simul
     for (int i = 0; i < N; i++) {
         fprintf(simulation_file, "%Le, %Le, %Le, %Le, %Le, %Le\n",
                 Solar_System[i].q[0], Solar_System[i].q[1],Solar_System[i].q[2],
-                Solar_System[i].p[0], Solar_System[i].p[1], Solar_System[i].p[2]);
+                Solar_System[i].p[0]/Solar_System[i].mass, Solar_System[i].p[1]/Solar_System[i].mass, Solar_System[i].p[2]/Solar_System[i].mass);
     }
 
 }

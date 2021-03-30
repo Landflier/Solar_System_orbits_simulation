@@ -56,7 +56,11 @@ int main() {
     printf("Starting system data: \n");
     print_current_system(N,Objects);
 
-    for (int iteration_number =0 ; iteration_number < Total_Number_of_steps ; iteration_number++ ){
+    //Write the value of k at the start of system_variables
+    fprintf(system_variables_python, " %Le \n ",
+            k);
+
+    for (int iteration_number = 0 ; iteration_number < Total_Number_of_steps ; iteration_number++ ){
 
         for (int i=0; i<N; i++){
             memcpy(&New_Object[i].q, update_q_i(k,i,N,Objects), sizeof (New_Object[i].q));
