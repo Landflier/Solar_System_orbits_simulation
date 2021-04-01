@@ -1,2 +1,0 @@
-/usr/bin/ar qc libRunge_Kutta.a  CMakeFiles/Runge_Kutta.dir/Runge_Kutta_second_order.c.o
-/usr/bin/ranlib libRunge_Kutta.a

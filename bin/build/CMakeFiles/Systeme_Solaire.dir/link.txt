@@ -1,1 +1,0 @@
-/usr/bin/cc    CMakeFiles/Systeme_Solaire.dir/main.c.o  -o Systeme_Solaire   -L/home/vasil/CLionProjects/Systeme_Solaire/lib  -Wl,-rpath,/home/vasil/CLionProjects/Systeme_Solaire/lib lib/libVector_operations.a 

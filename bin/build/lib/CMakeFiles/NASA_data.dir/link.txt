@@ -1,2 +1,0 @@
-/usr/bin/ar qc libNASA_data.a  CMakeFiles/NASA_data.dir/Read_NASA_data.c.o
-/usr/bin/ranlib libNASA_data.a

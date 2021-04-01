@@ -1,9 +1,0 @@
-/home/vasil/CLionProjects/Systeme_Solaire/bin/build/CMakeFiles/rebuild_cache.dir
-/home/vasil/CLionProjects/Systeme_Solaire/bin/build/CMakeFiles/edit_cache.dir
-/home/vasil/CLionProjects/Systeme_Solaire/bin/build/CMakeFiles/Systeme_Solaire.dir
-/home/vasil/CLionProjects/Systeme_Solaire/bin/build/lib/CMakeFiles/rebuild_cache.dir
-/home/vasil/CLionProjects/Systeme_Solaire/bin/build/lib/CMakeFiles/edit_cache.dir
-/home/vasil/CLionProjects/Systeme_Solaire/bin/build/lib/CMakeFiles/Vector_operations.dir
-/home/vasil/CLionProjects/Systeme_Solaire/bin/build/lib/CMakeFiles/NASA_data.dir
-/home/vasil/CLionProjects/Systeme_Solaire/bin/build/lib/CMakeFiles/Runge_Kutta.dir
-/home/vasil/CLionProjects/Systeme_Solaire/bin/build/lib/CMakeFiles/Hamiltonian.dir

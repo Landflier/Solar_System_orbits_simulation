@@ -1,2 +1,0 @@
-/usr/bin/ar qc libHamiltonian.a  CMakeFiles/Hamiltonian.dir/Hamiltonian.c.o
-/usr/bin/ranlib libHamiltonian.a
