@@ -4,5 +4,6 @@
 /data/Simulation_Results/planets_p_q_python.txt
 /data/Simulation_Results/system_variables_python.txt
 /bin/build/
+!bin/.gitkeep
 !bin/build/.gitkeep
-!/data/Simulation_Results/.gitkeep
+!data/Simulation_Results/.gitkeep
