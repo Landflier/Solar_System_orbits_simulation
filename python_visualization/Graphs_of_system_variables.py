@@ -47,7 +47,17 @@ Angular_plot.set_xlabel('Year')
 Angular_plot.set_ylabel('Angular momentum modulus')
 Angular_plot.set_title('Angular momentum wrt barycenter of Solar System')
 
-
-
 fig.savefig ("Hamiltonian-angular-momentum-graphs.png")
-plt.show()
+
+
+fig2 = plt.figure()
+
+Center_of_mass_orbit = fig2.add_subplot(1,1,1)
+
+Center_of_mass_orbit.plot (system_variables["center_of_mass_x"],
+                       system_variables["center_of_mass_y"] )
+Center_of_mass_orbit.set_xlabel('au')
+Center_of_mass_orbit.set_ylabel('au')
+Center_of_mass_orbit.set_title('Center of mass orbit wrt solar barycenter')
+
+fig2.savefig ("Center_of_mass_orbit.png")
