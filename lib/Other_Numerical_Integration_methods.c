@@ -46,38 +46,6 @@ long double* Euler_symplectic_update_q_i(long double k /*R-K step*/ , int i, int
     return new_q_i;
 }
 
-long double* Stromer_Verlet_update_p_i(long double k /*R-K step*/ , int i, int N, Stellar_body Object[N]){
-    static long double new_p_i[3];
-    new_p_i[0] = 0; new_p_i[1] = 0; new_p_i[2] = 0; //reset new_p_i everytime the function is called
-
-
-    Stellar_body Ref_point;
-
-    memcpy(&Ref_point, &Object[i], sizeof (Ref_point));
-
-    memcpy(&new_p_i,
-           Vector_Add(Object[i].p,
-                      Vector_Scalar(k, f_i(N, Object, i, Ref_point)))
-            ,sizeof(new_p_i));
-    return new_p_i;
-
-}
-
-long double* Stromer_Verlet_update_q_i(long double k /*R-K step*/ , int i, int N, Stellar_body Object[N]){
-    static long double new_q_i[3];
-    new_q_i[0] = 0; new_q_i[1] = 0; new_q_i[2] = 0; //reset new_p_i everytime the function is called
-
-    Stellar_body Ref_point;
-
-    memcpy(&Ref_point, &Object[i], sizeof (Ref_point));
-
-    memcpy(&new_q_i,
-           Vector_Add(Object[i].q,
-                      Vector_Scalar(k,g_i(Ref_point))),
-           sizeof(new_q_i) );
-
-    return new_q_i;
-}
 
 
 
