@@ -5,3 +5,5 @@
 /data/Simulation_Results/system_variables_python.txt
 /bin/
 /bin/build
+!bin/build/.gitkeep
+!/data/Simulation_Results/.gitkeep
