@@ -49,4 +49,5 @@ for i in range(number_of_planets):
     planet_subplot.set_ylabel('au')
     planet_subplot.set_title(planet_names[i] + " orbit")
 
+plt.show()
 fig.savefig ("Orbits_of_planets_x_y.png")
