@@ -19,4 +19,4 @@ target_link_libraries(Other_integration PUBLIC Hamiltonian Vector_operations)
 target_link_libraries(NASA_data PUBLIC Hamiltonian Vector_operations)
 
 
-target_link_libraries(${PROJECT_NAME} PUBLIC NASA_data Runge_Kutta  m)
+target_link_libraries(${PROJECT_NAME} PUBLIC NASA_data Runge_Kutta Other_integration m)

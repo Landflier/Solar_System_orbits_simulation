@@ -2,7 +2,9 @@
 #include "lib/Vector_operations.h"
 #include "lib/Hamiltonian.h"
 #include "lib/Runge_Kutta_second_order.h"
+#include "lib/Other_Numerical_Integration_methods.h"
 #include "lib/NASA_data.h"
+
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -60,9 +62,13 @@ int main() {
     for (int iteration_number = 0 ; iteration_number < Total_Number_of_steps ; iteration_number++ ){
 
         for (int i=0; i<N; i++){
-            memcpy(&New_Object[i].q, update_q_i(k,i,N,Objects), sizeof (New_Object[i].q));
-            memcpy(&New_Object[i].p, update_p_i(k,i,N,Objects), sizeof (New_Object[i].p));
-            //printf ("New p_i is : [%Le %Le %Le] \n", New_Object[i].p[0], New_Object[i].p[1], New_Object[i].p[2]);
+            // Runge-Kutta order 2 implementation
+//             memcpy(&New_Object[i].q, update_q_i(k,i,N,Objects), sizeof (New_Object[i].q));
+//             memcpy(&New_Object[i].p, update_p_i(k,i,N,Objects), sizeof (New_Object[i].p));
+
+            // Euler-symplectic implementation
+            memcpy(&New_Object[i].p, Euler_symplectic_update_p_i(k,i,N,Objects), sizeof (New_Object[i].p));
+            memcpy(&New_Object[i].q, Euler_symplectic_update_q_i(k,i,N,Objects, New_Object[i].p), sizeof (New_Object[i].q));
 
         }
             memcpy(&Objects, &New_Object, sizeof (Objects)); //update system

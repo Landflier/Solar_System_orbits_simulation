@@ -1,12 +1,7 @@
 import pandas as pd
 import numpy as np
 
-import pandas as pd
-import numpy as np
-
-
 import matplotlib.pyplot as plt
-import matplotlib.animation as animation
 
 ### Tis part of the script reads the data from results.txt
 ### and stores it in an array of pandas dataframes called solar_system_iterations
@@ -54,5 +49,4 @@ for i in range(number_of_planets):
     planet_subplot.set_ylabel('au')
     planet_subplot.set_title(planet_names[i] + " orbit")
 
-plt.show()
 fig.savefig ("Orbits_of_planets_x_y.png")

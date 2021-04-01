@@ -4,7 +4,9 @@
 
 #ifndef SOLAR_SYSTEM_REBASED_OTHER_NUMERICAL_INTEGRATION_METHODS_H
 #define SOLAR_SYSTEM_REBASED_OTHER_NUMERICAL_INTEGRATION_METHODS_H
-long double* Euler_update_p_i(long double k /*R-K step*/ , int i, int N, Stellar_body Object[N]);
+long double* Euler_symplectic_update_p_i(long double k /*R-K step*/ , int i, int N, Stellar_body Object[N]);
+long double* Euler_symplectic_update_q_i(long double k /*R-K step*/ , int i, int N, Stellar_body Object[N], long double p_i_plus_one[3]);
 
-long double* Euler_update_q_i(long double k /*R-K step*/ , int i, int N, Stellar_body Object[N]);
+long double* Stromer_Verlet_update_p_i(long double k /*R-K step*/ , int i, int N, Stellar_body Object[N]);
+long double* Stromer_Verlet_update_q_i(long double k /*R-K step*/ , int i, int N, Stellar_body Object[N]);
 #endif //SOLAR_SYSTEM_REBASED_OTHER_NUMERICAL_INTEGRATION_METHODS_H
