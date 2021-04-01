@@ -67,7 +67,7 @@ int main() {
         }
             memcpy(&Objects, &New_Object, sizeof (Objects)); //update system
 
-        Write_System_Variables(N,Objects, system_variables_python, total_mass);
+        Write_System_Variables(N,Objects, system_variables_python);
 
         //Write_Solar_System_iteration(N,Objects, simulation_file);
         //fprintf(simulation_file, "\n"); // delimeter charecter between simulations for human readable
