@@ -1,0 +1,28 @@
+################### REQUIREMENTS ####################
+
+Project build requires cmake-3.16 at least
+
+
+############# RUNNING THE PROJECT ###################
+
+To execute the project, in the current directory, run
+sh build.sh
+
+
+#################### RESULTS ########################
+
+
+Running the project generates position/velocity data in the
+data/Simulation_Results, in the form of two text files:
+
+planets_p_q_python.txt :
+        contains solar system for 5000 years with lines of
+        each iteration concatenated (all q,v of planets).
+
+        Later, this file is used in python_visualizations to illustrate
+        the movement of the objects
+
+system_variables_python.txt
+
+        contains solar system for 5000 years with data of
+        angular momentum (4-vector), center of mass (3-vector) and hamiltonian (scalar)

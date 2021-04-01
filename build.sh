@@ -1,4 +1,6 @@
 #!/bin/sh
-cmake -S . -B bin/build
+~/cmake-3.20.0/bin/cmake -S . -B bin/build
 make -C bin/build/
-./bin/build/Solar_System_rebased
+mkdir -p run
+cd run
+../bin/build/Solar_System_rebased

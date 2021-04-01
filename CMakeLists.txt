@@ -12,7 +12,8 @@ target_link_libraries(Vector_operations PUBLIC m) # Hamiltonian requires Vector_
 
 target_link_libraries(Hamiltonian PUBLIC Vector_operations) # Hamiltonian requires Vector_operations functionalites
 
-target_link_libraries(Runge_Kutta PUBLIC Hamiltonian Vector_operations) # Hamiltonian requires Vector_operations functionalites
+target_link_libraries(Runge_Kutta PUBLIC Hamiltonian Vector_operations)
+target_link_libraries(Other_integration PUBLIC Hamiltonian Vector_operations)
 
 
 target_link_libraries(NASA_data PUBLIC Hamiltonian Vector_operations)
