@@ -49,5 +49,5 @@ Angular_plot.set_title('Angular momentum wrt barycenter of Solar System')
 
 
 
-
+fig.savefig ("Hamiltonian-angular-momentum-graphs.png")
 plt.show()

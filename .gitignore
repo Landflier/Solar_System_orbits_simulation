@@ -1,9 +1,15 @@
 # Project exclude paths
 /cmake-build-debug/
+
 /data/Simulation_Results/planets_p_q_human_readable.txt
 /data/Simulation_Results/planets_p_q_python.txt
 /data/Simulation_Results/system_variables_python.txt
+!data/Simulation_Results/.gitkeep
+
 /bin/build/
 !bin/.gitkeep
-!bin/build/.gitkeep
-!data/Simulation_Results/.gitkeep
+!bin/build/.
+
+
+/python_visualization/Hamiltonian-angular-momentum-graphs.png
+/python_visualization/solar_system.mp4
