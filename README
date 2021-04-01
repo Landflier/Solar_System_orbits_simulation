@@ -2,12 +2,27 @@
 
 Project build requires cmake-3.16 at least
 
+to download on local machine, run:
+git clone --branch Added_numerical_integration_methods https://github.com/Landflier/Solar_System_rebased.git
+
+As the project was developed using JetBrains CLion, there is included a .idea folder.
 
 ############# RUNNING THE PROJECT ###################
 
 To execute the project, in the current directory, run
 sh build.sh
 
+
+###################### DATA #########################
+
+data for the planets is downloaded from NASA : https://ssd.jpl.nasa.gov/horizons.cgi#results
+and stored in data/Planets_NASA directory.
+To extract data run:
+
+python3.7  data_extract
+
+Solar_system_bodies.txt is used in the project as the input data
+Solar_system_bodies.csv is just human readable csv, to see data
 
 #################### RESULTS ########################
 
@@ -23,6 +38,28 @@ planets_p_q_python.txt :
         the movement of the objects
 
 system_variables_python.txt
-
         contains solar system for 5000 years with data of
         angular momentum (4-vector), center of mass (3-vector) and hamiltonian (scalar)
+
+
+
+################# VISUALISATION #########################
+
+In python_visualisation are 3 scripts, which use
+the file data/Simulation_Results/planets_p_q_python.txt as input:
+
+Graphs_of_system_variables.py
+        creates graphs of:
+            Hamiltonian and total angular momentum (modulus)
+            orbit of center of mass for the system
+
+
+orbits_plots.py
+        plots orbits of all the object
+
+
+visualise_second_version.py
+        animates the orbits and creates a .mp4 file
+
+
+
